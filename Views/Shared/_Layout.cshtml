@@ -1,0 +1,58 @@
+﻿
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FurnitureEmporim</title>
+    <link rel="stylesheet" href="~/css/output.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FurnitureEmporim.styles.css" asp-append-version="true" />
+</head>
+<body>
+    
+    <!--Header -->
+    <header class="text-gray-600 body-font text-white">
+        <div class="w-full p-5 flex flex-col md:flex-row items-center bg-black text-white">
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-end">
+                <a href="/User/Index" class="text-white mr-5 hover:underline cursor-pointer rounded transition-all duration-300">Sign in/Guest</a>
+                <a href="/User/Register" class="text-white mr-5 hover:underline cursor-pointer rounded transition-all duration-300">Create Account</a>
+            </nav>
+        </div>
+    </header>
+   
+
+        <div class="w-full p-5 flex flex-col md:flex-row items-center bg-sky-300 text-white">
+            <a class="flex title-font font-medium items-center text-gray-900">
+                <span class="text-xl text-white">FurnitureEmporium</span>
+            </a>
+            <nav class="flex flex-wrap items-center text-base justify-center mx-auto space-x-5">
+                <a href="/Home/Index" class="relative px-3 py-2 hover:bg-sky-400 hover:text-white cursor-pointer rounded transition-all duration-300">Home</a>
+                <a href="/About/Index" class="relative px-3 py-2 hover:bg-sky-400 hover:text-white cursor-pointer rounded transition-all duration-300">About</a>
+                <a href="/Products/Index" class="relative px-3 py-2 hover:bg-sky-400 hover:text-white cursor-pointer rounded transition-all duration-300">Products</a>
+            <a asp-action="AddToCart" asp-controller="Cart" class="relative px-3 py-2 hover:bg-sky-400 hover:text-white cursor-pointer rounded transition-all duration-300">Cart</a>
+            </nav>
+            
+
+        </div>
+
+
+
+
+   
+
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+ 
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
